@@ -6,6 +6,9 @@ import { Tracker } from 'meteor/tracker';
 
 import App from '../imports/ui/components/App';
 
+const authenticatedPages = [];
+const unAuthenticatedPages = [];
+
 Tracker.autorun(() => {
   const isAuthenticated = !!Meteor.userId();
 });
