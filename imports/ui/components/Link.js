@@ -1,10 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Accounts } from 'meteor/accounts-base';
 
 class Link extends Component {
+  onLogout = () => {
+    Accounts.logout();
+  }
+  
   render() {
     return (
       <div>
-        <h1>Link</h1>
+        <h1>Your Links</h1>
+        <button onClick={this.onLogout}>Logout</button>
       </div>
     )
   }
